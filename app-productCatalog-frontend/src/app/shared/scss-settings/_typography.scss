@@ -1,0 +1,19 @@
+//custom typography
+@import '~@angular/material/theming';
+
+//mat-typography-level(font-size,line-height,font-weight)
+$custom-typography: mat-typography-config(
+  $font-family: 'Roboto, cursive',
+  $headline: mat-typography-level(32px, 48px, 500),
+  $body-1: mat-typography-level(16px, 24px, 400)
+);
+
+// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
+@include mat-base-typography($custom-typography);
+// Override typography for a specific Angular Material component
+@include mat-checkbox-typography($custom-typography);
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include angular-material-typography($custom-typography);
+
+
+@include mat-core($custom-typography);

@@ -1,0 +1,28 @@
+//block element centering
+@mixin push--auto {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+//media queries
+$breakpoints: (
+        "desktop-wide": 1440px,
+        "desktop":      1200px,
+        "tablet-wide":  920px,
+        "tablet":       768px,
+        "phone-wide":   576px,
+        "phone":        320px,
+);
+@mixin mq($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
