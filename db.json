@@ -1,11 +1,26 @@
 {
-  "posts": [
+  "products": [
     {
       "id": 1,
-      "title": "hello"
+			"title": "Samsung Galaxy M10",
+			"image": "img1",
+			"text": "Lorem ipsum dolor sit amet consectetur adipisicing elit"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "reviews": [
+    {
+      "id": null,
+			"rate": null,
+			"text": "",
+			"id_user": "",
+			"id_entry":""
+    }
+	],
+	"users": [
+    {
+      "id": 1,
+			"username": "Bob",
+			"password": ""
+    }
+  ]
 }

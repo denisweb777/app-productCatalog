@@ -1,14 +1,21 @@
 
 import { Injectable } from '@angular/core';
 
+//HttpClient
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
 
-  constructor() { }
+  private url: string = "https://my-json-server.typicode.com/denisweb777/app-productCatalog/posts/1";
+
+  constructor(private http: HttpClient) { }
   getData() {
-    return [{ name: 'Bob', age: 50 }, { name: 'Olia', age: 25 }];
+    this.http.get(this.url)  
+      .subscribe(response => {  
+        console.log(response);  
+      });
   }
 }
-
