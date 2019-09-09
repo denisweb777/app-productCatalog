@@ -1,0 +1,40 @@
+<section class="reviews">
+	<div class="container" fxLayout="column nowrap" fxLayoutAlign="center center">
+		<div class="rating__container">
+			<div class="canvas-container">
+				<canvas class="canvas" #canvas1 width="20" height="20" (mouseenter)="mouseenter1()"
+					(mouseover)="mouseover1()"></canvas>
+				<canvas class="canvas" #canvas2 width="20" height="20" (mouseenter)="mouseenter2()"
+					(mouseover)="mouseover2()"></canvas>
+				<canvas class="canvas" #canvas3 width="20" height="20" (mouseenter)="mouseenter3()"
+					(mouseover)="mouseover3()"></canvas>
+				<canvas class="canvas" #canvas4 width="20" height="20" (mouseenter)="mouseenter4()"
+					(mouseover)="mouseover4()"></canvas>
+				<canvas class="canvas" #canvas5 width="20" height="20" (mouseenter)="mouseenter5()"
+					(mouseover)="mouseover5()"></canvas>
+			</div>
+			<p class="rating" *ngIf="rating">Rating:{{rating}}</p>
+		</div>
+
+		<mat-form-field class="field" appearance="outline">
+			<mat-label class="field__label">Add a comment</mat-label>
+			<textarea class="field__textarea" maxlength="1000" matInput [(ngModel)]="text" cdkTextareaAutosize
+				#autosize="cdkTextareaAutosize" cdkAutosizeMinRows="4" cdkAutosizeMaxRows="10"></textarea>
+		</mat-form-field>
+
+		<button mat-stroked-button color="accent" (click)="addComment()">Add a comment</button>
+		
+		<div class="comments">
+			<mat-card class="card" *ngFor="let comment of comments">
+				<mat-card-subtitle class="card__subtitle">
+					<span class="user">User: {{comment.username}}</span>
+					<span>Raiting: {{comment.rate}}</span>
+				</mat-card-subtitle>
+				<mat-card-content class="card__content">
+						{{comment.text}}
+				</mat-card-content>
+			</mat-card>
+		</div>
+		
+	</div>
+</section>

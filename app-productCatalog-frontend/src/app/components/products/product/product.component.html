@@ -1,1 +1,16 @@
-<p>product works!</p>
+<section class="product">
+	<div class="container" fxLayout="column nowrap" fxLayoutAlign="center center">
+		<mat-card class="card" fxLayout="column nowrap" fxLayoutAlign="start center">
+			<mat-card-title class="card__title">
+				{{product.title}}
+			</mat-card-title>
+			<img class="card__img" mat-card-lg-image src="{{product.src}}">
+			<mat-card-content class="card__content">
+				{{product.text}}
+			</mat-card-content>
+		</mat-card>
+	</div>
+</section>
+
+<app-reviews></app-reviews>
+	

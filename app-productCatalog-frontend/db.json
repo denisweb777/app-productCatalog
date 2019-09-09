@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "title": "Samsung Galaxy M10",
+      "image": "img1",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "id": 1
+    },
+    {
+      "title": "Xiaomi Redmi Note 7",
+      "image": "img2",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "id": 2
+    },
+    {
+      "title": "TP-Link Neffos X20",
+      "image": "img3",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "id": 3
+    },
+    {
+      "title": "Nokia 3.1 Plus",
+      "image": "img4",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "id": 4
+    },
+    {
+      "title": "Honor 7A Black",
+      "image": "img5",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "id": 5
+    }
+  ],
+  "reviews": [
+
+  ],
+  "users": [
+    {
+      "username": "Bob",
+      "password": "AAss$0",
+      "id": 1
+    }
+  ]
+}

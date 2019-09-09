@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service';
+import { Products } from 'src/app/models/products.model';
+
 
 @Component({
   selector: 'app-products',
@@ -8,15 +10,17 @@ import { ProductsService } from '../products.service';
 })
 export class ProductsComponent implements OnInit {
 
-  public productsData:object = [];
+  public products: object = [];
 
   constructor(private productsDataService: ProductsService) { }
 
   ngOnInit() {
-    /*
-    this.productsData = this.productsDataService.getData();
-    */
+    this.productsDataService.getProducts().subscribe((responce:Products) => {
+      this.products = responce;
+    });
+  }
+
+  srcImg(image) {
+    return "../../../../assets/images/" + image + ".png";
   }
 }
-
-

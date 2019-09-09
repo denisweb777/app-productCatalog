@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'sign-up', 
     loadChildren:'./components/sign-up/sign-up.module#SignUpModule'
   },
+  { 
+    path: 'account', 
+    loadChildren:'./components/account/account.module#AccountModule'
+  },
   
   { path: '', redirectTo: "/home", pathMatch: "full" }, 
   { path: 'not-found', component: NotFoundComponent },

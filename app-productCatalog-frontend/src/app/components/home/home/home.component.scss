@@ -1,0 +1,31 @@
+.home {
+	padding: 0 20px 0 20px;
+  .container {
+    .title {
+      margin-top: 10%;
+      text-align: center;
+    }
+    .images {
+      margin-top: 5%;
+      width: 680px;
+      .images__item {
+				position: relative;
+        width: 150px;
+        background: #dfdad9; // rgb(231, 192, 178);
+				&:hover:before{
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background: #777373; 
+					opacity: 0.2;
+				} 
+        img {
+          height: 150px;
+        }
+      }
+    }
+  }
+}

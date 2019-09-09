@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProductsComponent } from './products/products.component';
+import { ProductComponent } from './product/product.component';
+import { AuthGuard } from 'src/app/shared/guards/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
-    component: ProductsComponent
+    component: ProductsComponent, children: [
+    ]
+  },
+  {
+    path: 'product/:id', component: ProductComponent ,/*canActivate:[AuthGuard]*/
   }
 ];
 
@@ -14,3 +20,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class ProductsRoutingModule { }
+
+

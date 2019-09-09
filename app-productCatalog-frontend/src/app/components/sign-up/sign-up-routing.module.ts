@@ -5,7 +5,9 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 const routes: Routes = [
   {
     path: '',
-    component: SignUpComponent
+    component: SignUpComponent, children: [
+     
+    ]
   }
 ];
 
@@ -14,3 +16,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class SignUpRoutingModule { }
+

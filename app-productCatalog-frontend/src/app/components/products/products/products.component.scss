@@ -1,0 +1,29 @@
+.products{
+	padding: 0 20px 0 20px;
+	.container{
+		margin-top:10%; 
+		.card{
+			margin-top:10px; 
+			background: rgb(223, 218, 217);
+			//border-radius: 20px;
+			.card__img{
+			}
+			.card__content{
+			padding-left: 20px; 
+				.card__title{
+					font-size: 18pt;
+				}
+				.card__subtitle{
+				}
+			}
+			.card__actions{
+				margin-left: 40px; 
+				padding-top: 20px; 
+				.button{
+					width: 100px;
+				}
+			}
+		}
+	}
+}
+

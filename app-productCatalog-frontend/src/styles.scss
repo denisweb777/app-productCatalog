@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "./app/shared/scss-settings/base";
-@import "./app/shared/scss-settings/mixins";
 @import "./app/shared/scss-settings/reset";
+@import "./app/shared/scss-settings/mixins";
+@import "./app/shared/scss-settings/base";
 @import "./app/shared/scss-settings/theme";
 @import "./app/shared/scss-settings/typography";
 @import "./app/shared/scss-settings/vars";

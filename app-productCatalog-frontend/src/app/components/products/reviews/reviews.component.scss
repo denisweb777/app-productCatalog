@@ -1,0 +1,62 @@
+.reviews{
+  border-bottom:1px solid  rgb(223, 218, 217);
+  border-left:1px solid  rgb(223, 218, 217);
+  border-right:1px solid  rgb(223, 218, 217);
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto 0 auto;
+  .container{
+    .rating__container{
+      text-align: center;
+      .canvas-container{
+        .canvas{
+          margin-left: 2px;
+        }
+      }
+    }
+    .field {
+      width: 400px;
+      @media (max-width: 500px) {
+        width: 300px;
+      }
+      .field__label {
+
+      }
+      .field__textarea {
+        width: 400px;
+        @media (max-width: 500px) {
+          width: 300px;
+        }
+      }
+    }
+
+    .comments{
+      .card{
+        margin-top:20px; 
+        width: 400px;
+        border:1px solid grey;
+        @media (max-width: 500px) {
+          width: 300px;
+        }
+        .card__subtitle{
+          .user{
+            margin-right: 20px;
+            text-transform: underline;
+            color:orangered;
+          }
+        }
+        .card__content{
+          word-wrap:break-word;
+          white-space:normal;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

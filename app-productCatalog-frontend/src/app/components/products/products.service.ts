@@ -1,7 +1,5 @@
 
 import { Injectable } from '@angular/core';
-
-//HttpClient
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
@@ -9,13 +7,26 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ProductsService {
 
-  private url: string = "https://my-json-server.typicode.com/denisweb777/app-productCatalog/posts/1";
+  private url: string = "http://localhost:3000/products";
 
   constructor(private http: HttpClient) { }
-  getData() {
-    this.http.get(this.url)  
-      .subscribe(response => {  
-        console.log(response);  
-      });
+
+  //products
+  getProducts() {
+    const headers = new HttpHeaders()
+      .set("Content-Type", "application/json; charset=utf8");
+    
+      // is used TokenInterceptorService (shared/services/token-interceptor.service).
+      //.set("authorization", window.localStorage.token);
+     
+    return this.http.get(this.url, { headers });
+  }
+
+  //product
+  getProduct(id) {
+    const headers = new HttpHeaders()
+      .set("Content-Type", "application/json; charset=utf8");
+
+    return this.http.get(this.url+`/${id}`, { headers });
   }
 }

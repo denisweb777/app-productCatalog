@@ -1,43 +1,51 @@
 <!-- header -->
 <header class="header">
 	<div class="container">
-		<mat-toolbar color="primary">
-			<mat-toolbar-row fxLayout="row wrap" >
-				<nav class="navMenu" fxFlex="90%" fxLayout="row wrap" fxLayoutAlign="start start">
+		<mat-toolbar class="toolbar" color="primary">
+			<mat-toolbar-row class="toolbar__row_top" fxLayout="row wrap">
+				<nav class="navMenu" fxFlex="95%" fxLayout="row wrap" fxLayoutAlign="start start">
 					<mat-menu>
-					<!-- 
-					-->
+						<!-- 
+						-->
 					</mat-menu>
 					<button class="navMenu__item" mat-button routerLink="/home" routerLinkActive="active">Home</button>
 
 					<mat-menu>
-					<!--
-					-->
+						<!--
+						-->
 					</mat-menu>
 					<button class="navMenu__item" mat-button routerLink="/products" routerLinkActive="active">Products</button>
 
 					<mat-menu>
-					<!--   		
-					-->
+						<!--   		
+						-->
 					</mat-menu>
 					<button class="navMenu__item" mat-button routerLink="/sign-in" routerLinkActive="active">Sign in</button>
 
 					<mat-menu>
-					<!--   		
-					-->
+						<!--   		
+						-->
 					</mat-menu>
 					<button class="navMenu__item" mat-button routerLink="/sign-up" routerLinkActive="active">Sign up</button>
 
 					<!-- 
-				  <mat-nav-list>
-							<a mat-list-item routerLink="/home" routerLinkActive="active">Home</a>
-							<a mat-list-item routerLink="/products" routerLinkActive="active">Products</a>
-						  <a mat-list-item routerLink="/sign-in" routerLinkActive="active">Sign in</a>
-					    <a mat-list-item routerLink="/sign-up" routerLinkActive="active">Sign out</a>
-				  </mat-nav-list>
-				  -->
+						<mat-nav-list>
+								<a mat-list-item routerLink="/home" routerLinkActive="active">Home</a>
+								<a mat-list-item routerLink="/products" routerLinkActive="active">Products</a>
+								<a mat-list-item routerLink="/sign-in" routerLinkActive="active">Sign in</a>
+								<a mat-list-item routerLink="/sign-up" routerLinkActive="active">Sign out</a>
+						</mat-nav-list>
+						-->
 				</nav>
-				<mat-icon class="mat-icon" fxFlex="10%">shopping_cart</mat-icon>
+				<mat-icon class="mat-icon" fxFlex="5%">shopping_basket</mat-icon>
+			</mat-toolbar-row>
+
+			<mat-toolbar-row class="toolbar__row_bottom" fxLayoutAlign="end start">
+				<p class="auyh">Welcome: {{user}}!</p>
+				<button class="account" [style.color]="color1" *ngIf="auth" mat-button (mousemove)="addColor1()"
+					(mouseout)="removeColor1()" (click)="account()">Account</button>
+				<button class="exit" [style.color]="color2" *ngIf="auth" (click)="signOut()" mat-button
+					(mousemove)="addColor2()" (mouseout)="removeColor2()">Sign out</button>
 			</mat-toolbar-row>
 		</mat-toolbar>
 	</div>
@@ -49,12 +57,12 @@
 <!-- footer -->
 <footer class="footer">
 	<div class="container">
-			<mat-toolbar color="primary">
-					<mat-toolbar-row fxLayout="row wrap">
-						<p class="additionalInformation  mat-body-strong">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-						</p>
-					</mat-toolbar-row> 
-			</mat-toolbar>
+		<mat-toolbar class="toolbar" color="primary">
+			<mat-toolbar-row class="toolbar__row" fxLayout="row wrap">
+				<p class="additionalInformation  mat-body-strong">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				</p>
+			</mat-toolbar-row>
+		</mat-toolbar>
 	</div>
 </footer>

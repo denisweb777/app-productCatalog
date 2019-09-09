@@ -1,1 +1,18 @@
-<p>products works!</p>
+<section class="products">
+	<div class="container" fxLayout="column nowrap" fxLayoutAlign="center center">
+		<mat-card class="card" fxLayout="row wrap" *ngFor="let product of products">
+			<img class="card__img" mat-card-sm-image [src]="srcImg(product.image)">
+			<mat-card-content class="card__content" fxLayout="column nowrap">
+				<mat-card-title class="card__title">
+					{{product.title}}
+				</mat-card-title>
+				<mat-card-subtitle class="card__subtitle">
+					{{product.text}}
+				</mat-card-subtitle>
+			</mat-card-content>
+			<mat-card-actions class="card__actions">
+				<button class="button" [routerLink]="['product',product.id]" mat-raised-button color="warn">Detail</button>
+			</mat-card-actions>
+		</mat-card>
+	</div>
+</section>
